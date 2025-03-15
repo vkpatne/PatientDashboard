@@ -1,0 +1,9 @@
+cohorts:
+  keys:
+    - field: "name"
+      operator: "="
+      table: "patient"
+    - field: "diagnosis"
+      operator: "="
+      table: "Diagnostics"
+    

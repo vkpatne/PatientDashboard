@@ -1,0 +1,36 @@
+
+type Diagnostics {
+	diagnosticId: ID!
+	diagnosis: String
+	diagnosticDate: String
+	patient: Patient
+}
+
+type Treatments {
+	treatmentId: ID!
+	treatment: String
+	treatmentDate: String
+	patient: Patient
+}
+
+
+type Patient {
+    patientId: ID!
+    phone: String
+    firstName: String
+    middleName: String
+    lastName: String
+    address: String
+    dob: String
+    gender: String
+    createdAt: String
+    updatedAt: String
+    treatments: [Treatments]
+    diagnostics: [Diagnostics]
+}
+
+# The Root Query for the application
+type Query {
+    findAllPatients(offset: Int): [Patient]!
+}
+
